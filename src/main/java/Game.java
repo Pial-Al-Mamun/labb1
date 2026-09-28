@@ -11,16 +11,12 @@ public class Game {
         this.p2 = p2;
     }
 
-    private static int rollDice() {
-        return RandomGenerator.getDefault().nextInt(1, 7);
-    }
-
     private void playTurn(Player player) {
         System.out.println();
         System.out.println(player.getFullName() + "'s turn:");
 
         for (var i = 0; i < 2; i++) {
-            var roll = rollDice();
+            var roll = Dice.rollDice();
             player.addToScore(roll);
             System.out.println("   Roll " + (i + 1) + ": " + roll);
         }
