@@ -37,6 +37,7 @@ public class Main {
             var input = scanner.nextLine().trim();
 
             int rounds;
+
             try {
                 rounds = Integer.parseInt(input);
             } catch (NumberFormatException e) {
@@ -47,6 +48,7 @@ public class Main {
             if (rounds > 0) {
                 return rounds;
             }
+
             System.out.println("Number of rounds must be greater than 0.");
         }
     }
